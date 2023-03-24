@@ -1,0 +1,34 @@
+//base
+@import "./base/reset";
+
+//abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixin";
+
+//components
+@import "./components/header","./components/card","./components/card_titiz", './components/questionnaire';
+
+//pages
+@import "./pages/index";
+@import "./pages/distributor";
+@import "./pages/kichen";
+@import "./pages/dishwasher";
+@import "./pages/cleaners";
+.main{
+     max-width: 1920px;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    .header{
+        width: 100%;
+        height: 110px;
+        @media  only screen and (max-width:450px){
+            width: 100%;
+            height: auto;
+          }
+        @media  only screen and (max-width:650px){
+            width: 100%;
+            height: auto;
+          }
+    }
+}

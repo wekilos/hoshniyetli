@@ -1,0 +1,141 @@
+.kitchen_nav{
+    max-width: 1440px;
+    height: auto;
+    nav {
+      width: 100%;
+      @include flexBox(space-between, center);
+      padding-top: 20px;
+  
+      .lang{
+        position: relative;
+        display: inline-block;
+    
+        &:hover .lang-content {
+          display: block;
+        }
+    
+        .dropbtn{
+          color: black;
+          padding: 16px;
+          font-size: 16px;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+        .lang-content{
+          display: none;
+          position: absolute;
+          z-index: 1;
+        
+        button{
+          color: black;
+          padding: 16px;
+          border: none;
+          border-radius: 50%;
+          text-decoration: none;
+          display: block;
+    
+          &:hover{
+            background-color: #f1f1f1;
+          }
+        }
+      }
+    }
+      ul {
+        list-style: none;
+        @include flexBox(center, center);
+        li {
+          padding-right: 50px;
+          a {
+            text-decoration: none;
+            @include underline;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            display: block;
+            position: relative;
+            color: $blue_color;
+          }
+        }
+      }
+  
+      .right {
+        padding-right: 10px;
+        @include flexBox(space-between, center);
+        .search {
+          margin: 5px 10px;
+        }
+        .lang {
+          @include flexBox(space-between, center);
+          // margin: 5px;
+          cursor: pointer;
+  
+          .active {
+            margin: 5px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 22px;
+            color: #04319c;
+            svg {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+    .kitchen{
+        h1 {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 24px;
+            color: #04319c;
+            padding: 40px;
+          }
+         
+    }
+    footer {
+        @include flexBox(center, center);
+        flex-direction: column;
+    
+        .footer {
+          @include flexBox(center, center);
+          margin: 20px;
+          .img_f {
+            width: 150px;
+    
+            img {
+              width: 107.69px;
+              height: 100px;
+            }
+          }
+          .contacts {
+            color: #04319c;
+            margin-bottom: 10px;
+    
+            p {
+              padding: 10px;
+              font-style: italic;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              svg {
+                padding-top: 10px;
+              }
+            }
+          }
+        }
+        .hr {
+          border: none;
+          border-top: 3px solid $blue_color;
+          width: 100%;
+          margin-left: 70px;
+        }
+        .p {
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 30px;
+          margin: 30px;
+        }
+      }
+}
